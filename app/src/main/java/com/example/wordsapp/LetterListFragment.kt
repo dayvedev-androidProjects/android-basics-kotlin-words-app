@@ -61,7 +61,7 @@ class LetterListFragment : Fragment() {
     ): View? {
         // Retrieve and inflate the layout for this fragment
         _binding = FragmentLetterListBinding.inflate(inflater, container, false)
-        val view = binding.root
+        val view = binding.root //return inflate view
         return view
     }
 
