@@ -11,6 +11,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import java.io.IOException
+import java.lang.reflect.TypeVariable
 
 
 private const val LAYOUT_PREFERENCES_NAME = "layout_preferences"
@@ -34,6 +35,12 @@ class SettingsDataStore(context: Context) {
             preferences[IS_LINEAR_LAYOUT_MANAGER] = isLinearLayoutManager
         }
     }
+
+//    suspend fun <T> saveToPreferencesStore(key: Preferences.Key<TypeVariable(T)>, isLinearLayoutManager: Boolean, context: Context) {
+//        context.dataStore.edit { preferences ->
+//            preferences[key] = isLinearLayoutManager
+//        }
+//    }
 
 
     /**
